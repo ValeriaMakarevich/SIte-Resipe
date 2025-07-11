@@ -1,0 +1,80 @@
+.windowContainer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(23, 23, 23, 0.39);
+  height: 100%;
+  width: 100%;
+}
+
+.windowResipe {
+  height: 90%;
+  width: 30%;
+  background-color: white;
+}
+
+.buttonClose {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 6px 0px 5px 3px;
+
+}
+
+.imgClose {
+  width: 20px;
+  height: 20px;
+}
+
+.resipeImg {
+  height: 40%;
+  width: 100%;
+}
+
+.resipeName {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 18%;
+}
+
+.resipeTag {
+  border: none;
+  background-color: rgb(255, 228, 109);
+  padding: 5px 15px 5px 15px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-bottom: 22%;
+}
+
+.wiewResipe {
+  border: none;
+  background-color: rgb(255, 228, 109);
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.change {
+  border: none;
+  color:rgb(243, 207, 47);
+  background-color: rgb(80, 104, 67);
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.close {
+  border: none;
+  color:rgb(243, 47, 109);
+  border: 1px solid rgb(243, 47, 109);
+  background-color: white;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
