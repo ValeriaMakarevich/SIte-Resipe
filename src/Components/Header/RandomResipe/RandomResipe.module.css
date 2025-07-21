@@ -31,7 +31,34 @@ margin-bottom: 1%;
     cursor: pointer;
 }
 
+@media (min-width: 1920px){
+  .backgroundResipe{
+height: 18vw;
+}
+
+.randomResipe{
+    position: absolute;
+    width: 100%;
+    top: 17%;
+    color: #ffffff;
+    text-align: center;
+}
+
+}
+
+@media (max-width: 1536px){
+    .backgroundResipe{
+height: 28vw;
+}
+}
+
 @media (max-width: 1024px){
+    .backgroundResipe{
+width: 100%;
+height: 60vw;
+margin-bottom: 1%;
+}
+
     .title{
     font-size: 30px;
 }
