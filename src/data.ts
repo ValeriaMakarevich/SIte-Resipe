@@ -1,5 +1,5 @@
-interface ResipeObject {
-    id: number;
+export interface ResipeObject {
+    id?: number;
     name: string;
     img: string;
     tag: string;

@@ -1,11 +1,21 @@
+import { useState } from "react";
 import { resipeObject } from "../../data";
 import styles from "./ResipeAll.module.css";
+import SearchResipe from "./SearchResipe/SearchResipe";
+
 
 
 
 const ResipeAll: React.FC = () => {
-  
+ 
+const [resipeList, setResipeList] = useState(resipeObject)
+const [inputValue, setInputValue] = useState('')
+
+
+
   return (
+    <>
+   <SearchResipe inputValue = {inputValue} setInputValue = {setInputValue}/>
     <div className={styles.ResipeContainer}>
         {resipeObject.map((item, id) =>{
             return(
@@ -22,6 +32,7 @@ const ResipeAll: React.FC = () => {
         
         }
     </div>
+    </>
   )
 };
 
