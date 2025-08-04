@@ -25,7 +25,7 @@ const modalOpen = () =>{
         <p className={styles.text}>Нажмите на кнопку</p>
         <button className={styles.buttonResipe} onClick={() => {modalOpen(); random()} }>Случайный рецепт</button>
         </div>
-        <ModalWindow resipe={resipe} active={modalActive} setActive={setModalActive}/>
+        <ModalWindow resipe={resipe} active={modalActive} setActive={setModalActive} random={random}/>
      </>
     )
 }

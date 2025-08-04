@@ -8,7 +8,7 @@ interface ModalWindowtProps {
     resipe: ResipeObject 
   }
 
-const ModalWindow:React.FC<ModalWindowtProps> = ({active, setActive, resipe}) =>{
+const ModalWindow:React.FC<ModalWindowtProps> = ({active, setActive, resipe, random}) =>{
 
     return(
         <div className={active ? styles.windowContainer : styles.inActive} onClick={() => setActive(false)}>
@@ -20,7 +20,7 @@ const ModalWindow:React.FC<ModalWindowtProps> = ({active, setActive, resipe}) =>
            
          <div className={styles.btnContainer}>
     <button className={styles.wiewResipe}>Посмотреть рецепт</button>
-    <button className={styles.change}>Другой рецепт</button>
+    <button  className={styles.change} onClick={random}>Другой рецепт</button>
     <button className={styles.close} onClick={() => setActive(false)}>Закрыть</button>
     </div>
 </div>

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { resipeObject } from "../../data";
+import { useEffect, useState } from "react";
+import { resipeObject, type ResipeObject } from "../../data";
 import styles from "./ResipeAll.module.css";
 import SearchResipe from "./SearchResipe/SearchResipe";
 
@@ -11,13 +11,29 @@ const ResipeAll: React.FC = () => {
 const [resipeList, setResipeList] = useState(resipeObject)
 const [inputValue, setInputValue] = useState('')
 
+const filterResipe = (request: string, resipeArray:Array<ResipeObject>) => {
+  if(!request){
+    return resipeArray;
+  }
+  return  resipeArray.filter(({name}) =>
+  name.toLowerCase().includes(request.toLowerCase())
+)
+}
+
+useEffect(() => {
+  const Debounce = setTimeout(()=>{
+    const filteredResipe = filterResipe(inputValue, resipeObject)
+    setResipeList(filteredResipe)
+  }, 300)
+  return() => clearTimeout(Debounce)
+})
 
 
   return (
     <>
    <SearchResipe inputValue = {inputValue} setInputValue = {setInputValue}/>
     <div className={styles.ResipeContainer}>
-        {resipeObject.map((item, id) =>{
+        {resipeList.map((item, id) =>{
             return(
         <div className={styles.CardContainer} key={id}>
          <img className={styles.imageResipe} src={item.img} alt="" />
